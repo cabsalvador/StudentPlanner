@@ -11,7 +11,17 @@ import SwiftUI
 struct StudentPlannerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                InstructorEditorView(data: .constant(Instructor(firstName: "", lastName: "", title: "", department: "", officeRoom: "", emails: [], phoneNumbers: [], officeHours: "", webpageURL: "").data), isEditing: false)
+                    .toolbar {
+                        ToolbarItem(placement: .cancellationAction) {
+                            Button("Dismiss") {}
+                        }
+                        ToolbarItem(placement: .confirmationAction) {
+                            Button("Save") {}
+                        }
+                    }
+            }
         }
     }
 }
