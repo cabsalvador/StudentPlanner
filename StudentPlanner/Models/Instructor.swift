@@ -34,7 +34,22 @@ struct Instructor: Identifiable {
 }
 
 extension Instructor {
-    var data: Data { Data(firstName: firstName, lastName: lastName, title: title, department: department, officeRoom: officeRoom, emails: emails, phoneNumbers: phoneNumbers, officeHours: officeHours, webpageURL: webpageURL) }
+    var data: Data {
+        Data(firstName: firstName, lastName: lastName, title: title, department: department, officeRoom: officeRoom, emails: emails, phoneNumbers: phoneNumbers, officeHours: officeHours, webpageURL: webpageURL)
+    }
+    
+    init(using data: Data, id: UUID = UUID()) {
+        self.id = id
+        self.firstName = data.firstName
+        self.lastName = data.lastName
+        self.title = data.title
+        self.department = data.department
+        self.officeRoom = data.officeRoom
+        self.emails = data.emails
+        self.phoneNumbers = data.phoneNumbers
+        self.officeHours = data.officeHours
+        self.webpageURL = data.webpageURL
+    }
     
     struct Data {
         var firstName = ""
@@ -46,6 +61,17 @@ extension Instructor {
         var phoneNumbers: [String] = []
         var officeHours = ""
         var webpageURL = ""
+    }
+    
+    var fullName: String {
+        firstName + " " + lastName
+    }
+    
+    var namesAreEmpty: Bool {
+        if(firstName.isEmpty && lastName.isEmpty) {
+            return true
+        }
+        return false
     }
     
     mutating func update(from data: Data) {

@@ -12,9 +12,9 @@ struct Semester: Identifiable {
     var title: String
     var start: Date
     var end: Date
-    var courses: [String]
+    var courses: [Course]
     
-    init(id: UUID = UUID(), title: String, start: Date, end: Date, courses: [String]) {
+    init(id: UUID = UUID(), title: String, start: Date, end: Date, courses: [Course]) {
         self.id = id
         self.title = title
         self.start = start
@@ -24,6 +24,16 @@ struct Semester: Identifiable {
 }
 
 extension Semester {
+    
+    init(using data: Data, id: UUID = UUID()) {
+        self.id = id
+        self.title = data.title
+        self.start = data.start
+        self.end = data.end
+        self.courses = data.courses
+    }
+    
+    
     var data: Data {
         Data(title: title, start: start, end: end, courses: courses)
     }
@@ -32,7 +42,7 @@ extension Semester {
         var title: String = ""
         var start: Date = Date()
         var end: Date = Calendar.current.date(byAdding: .month, value: 4, to: Date.now) ?? Date.now
-        var courses: [String] = []
+        var courses: [Course] = []
     }
     
     mutating func update(from data: Data) {
@@ -45,8 +55,8 @@ extension Semester {
 
 extension Semester {
     static let sampleData = [
-        Semester(title: "Fall 2020", start: Date.now, end: Date(), courses: ["Biology 1", "Anthropolgy 121", "Math 29"]),
-        Semester(title: "Spring 2021", start: Date(), end: Date.distantFuture, courses: ["English 101", "Art 102", "Communications 131", "Physics 5B"]),
-        Semester(title: "Fall 2021", start: Date.distantFuture, end: Date.distantFuture, courses: ["Math 30", "Music 101"])
+        Semester(title: "Fall 2020", start: Date.now, end: Date(), courses: Course.sampleData),
+        Semester(title: "Spring 2021", start: Date(), end: Date.distantFuture, courses: Course.sampleData),
+        Semester(title: "Fall 2021", start: Date.distantFuture, end: Date.distantFuture, courses: Course.sampleData)
     ]
 }

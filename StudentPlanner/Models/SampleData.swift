@@ -59,10 +59,10 @@ struct SampleData {
     ]
     
     static let instructors: [Instructor] = [
-        Instructor(firstName: "Yuan", lastName: "Chen", title: "Assistant Professor", department: SampleData.departments[14], officeRoom: "RVR 5042", emails: ["chengy@ecs.csus.edu"], phoneNumbers: ["9162783088"], officeHours: "", webpageURL: "http://www.ycheng.org"),
-        Instructor(firstName: "Jun", lastName: "Dai", title: "Assistant Professor", department: SampleData.departments[13], officeRoom: "RVR 5060", emails: ["daij@ecs.csus.edu"], phoneNumbers: ["9162785163"], officeHours: "", webpageURL: ""),
-        Instructor(firstName: "V. Scott", lastName: "Gordan", title: "Professor", department: SampleData.departments[12], officeRoom: "", emails: ["gordonvs@ecs.csus.edu", "demo@csus.edu"], phoneNumbers: ["9162787946"], officeHours: "", webpageURL: "https://athena.ecs.csus.edu/~gordonvs/"),
-        Instructor(firstName: "Meiliu", lastName: "Lu", title: "Professor", department: SampleData.departments[11], officeRoom: "RVR 5016", emails: ["mei@ecs.csus.edu"], phoneNumbers: ["9162787360"], officeHours: "", webpageURL: "https://www.ecs.csus.edu/wcm/csc/people/lu/"),
-        Instructor(firstName: "Ruthann ", lastName: "Biel", title: "Professor", department: "Computer Science", officeRoom: "RVR 5015", emails: ["bielr@ecs.csus.edu"], phoneNumbers: ["9162784205"], officeHours: "", webpageURL: "")
+        Instructor(firstName: "Yuan", lastName: "Chen", title: "Assistant Professor", department: SampleData.departments[14], officeRoom: "RVR 5042", emails: ["chengy@ecs.csus.edu"], phoneNumbers: ["909-827-0675"], officeHours: "", webpageURL: "http://www.ycheng.org"),
+        Instructor(firstName: "Jun", lastName: "Dai", title: "Assistant Professor", department: SampleData.departments[13], officeRoom: "RVR 5060", emails: ["daij@ecs.csus.edu"], phoneNumbers: ["909-827-0675"], officeHours: "", webpageURL: ""),
+        Instructor(firstName: "V. Scott", lastName: "Gordan", title: "Professor", department: SampleData.departments[12], officeRoom: "", emails: ["gordonvs@ecs.csus.edu", "demo@csus.edu"], phoneNumbers: ["909-827-0675"], officeHours: "", webpageURL: "https://athena.ecs.csus.edu/~gordonvs/"),
+        Instructor(firstName: "Meiliu", lastName: "Lu", title: "Professor", department: SampleData.departments[11], officeRoom: "RVR 5016", emails: ["mei@ecs.csus.edu"], phoneNumbers: ["909-827-0675"], officeHours: "", webpageURL: "https://www.ecs.csus.edu/wcm/csc/people/lu/"),
+        Instructor(firstName: "Ruthann ", lastName: "Biel", title: "Professor", department: "Computer Science", officeRoom: "RVR 5015", emails: ["bielr@ecs.csus.edu"], phoneNumbers: ["909-827-0675"], officeHours: "", webpageURL: "")
     ]
 }

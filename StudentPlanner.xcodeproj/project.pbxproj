@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E12ACCD28130EE800F8E684 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E12ACCC28130EE800F8E684 /* MainView.swift */; };
 		3E608E03280F244800371D99 /* StudentPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E608E02280F244800371D99 /* StudentPlannerApp.swift */; };
 		3E608E05280F244800371D99 /* CourseThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E608E04280F244800371D99 /* CourseThemeView.swift */; };
 		3E608E07280F244A00371D99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E608E06280F244A00371D99 /* Assets.xcassets */; };
@@ -16,8 +17,10 @@
 		3E608E19280F2FFC00371D99 /* SemesterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E608E18280F2FFC00371D99 /* SemesterCellView.swift */; };
 		3E608E1B280F39A300371D99 /* Semester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E608E1A280F39A300371D99 /* Semester.swift */; };
 		3E62749B280F6B030049D796 /* ViewDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E62749A280F6B030049D796 /* ViewDefaults.swift */; };
+		3E6361462812752C006A0D4E /* CourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6361452812752C006A0D4E /* CourseListView.swift */; };
 		3E6C30A3280F7890000774FF /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C30A2280F7890000774FF /* Course.swift */; };
 		3E6C30A6280F7A7D000774FF /* DaysOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C30A5280F7A7D000774FF /* DaysOfWeek.swift */; };
+		3E785DA128132D5B0067A86C /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E785DA028132D5B0067A86C /* Calendar.swift */; };
 		3ECC78392811D41800E36874 /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC78382811D41800E36874 /* CourseDetailView.swift */; };
 		3ECC783C2811EDEB00E36874 /* SemesterDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC783B2811EDEB00E36874 /* SemesterDetailsVM.swift */; };
 		3ECC783E2811EEE200E36874 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC783D2811EEE200E36874 /* Location.swift */; };
@@ -25,6 +28,9 @@
 		3ECC78422811F04E00E36874 /* CourseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC78412811F04E00E36874 /* CourseClass.swift */; };
 		3ECC78442811F69C00E36874 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC78432811F69C00E36874 /* SampleData.swift */; };
 		3ECC7846281200DA00E36874 /* InstructorEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC7845281200DA00E36874 /* InstructorEditorView.swift */; };
+		3ECC784B28121CE300E36874 /* InstructorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC784A28121CE300E36874 /* InstructorListView.swift */; };
+		3ECC784D281224EA00E36874 /* InstructorListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC784C281224EA00E36874 /* InstructorListCell.swift */; };
+		3ECC784F28122B5200E36874 /* InstructorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC784E28122B5200E36874 /* InstructorDetailView.swift */; };
 		3ED15314280F8EAF0011C8C1 /* CourseEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED15313280F8EAF0011C8C1 /* CourseEditorView.swift */; };
 		3ED15318280F985A0011C8C1 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED15317280F985A0011C8C1 /* Color.swift */; };
 		3ED1531A280F9D080011C8C1 /* CourseTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED15319280F9D080011C8C1 /* CourseTheme.swift */; };
@@ -32,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E12ACCC28130EE800F8E684 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3E608DFF280F244800371D99 /* StudentPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E608E02280F244800371D99 /* StudentPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentPlannerApp.swift; sourceTree = "<group>"; };
 		3E608E04280F244800371D99 /* CourseThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseThemeView.swift; sourceTree = "<group>"; };
@@ -42,8 +49,10 @@
 		3E608E18280F2FFC00371D99 /* SemesterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterCellView.swift; sourceTree = "<group>"; };
 		3E608E1A280F39A300371D99 /* Semester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; };
 		3E62749A280F6B030049D796 /* ViewDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDefaults.swift; sourceTree = "<group>"; };
+		3E6361452812752C006A0D4E /* CourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListView.swift; sourceTree = "<group>"; };
 		3E6C30A2280F7890000774FF /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		3E6C30A5280F7A7D000774FF /* DaysOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfWeek.swift; sourceTree = "<group>"; };
+		3E785DA028132D5B0067A86C /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		3ECC78382811D41800E36874 /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
 		3ECC783B2811EDEB00E36874 /* SemesterDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterDetailsVM.swift; sourceTree = "<group>"; };
 		3ECC783D2811EEE200E36874 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -51,6 +60,9 @@
 		3ECC78412811F04E00E36874 /* CourseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseClass.swift; sourceTree = "<group>"; };
 		3ECC78432811F69C00E36874 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		3ECC7845281200DA00E36874 /* InstructorEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorEditorView.swift; sourceTree = "<group>"; };
+		3ECC784A28121CE300E36874 /* InstructorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorListView.swift; sourceTree = "<group>"; };
+		3ECC784C281224EA00E36874 /* InstructorListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorListCell.swift; sourceTree = "<group>"; };
+		3ECC784E28122B5200E36874 /* InstructorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorDetailView.swift; sourceTree = "<group>"; };
 		3ED15313280F8EAF0011C8C1 /* CourseEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseEditorView.swift; sourceTree = "<group>"; };
 		3ED15317280F985A0011C8C1 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		3ED15319280F9D080011C8C1 /* CourseTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTheme.swift; sourceTree = "<group>"; };
@@ -92,6 +104,7 @@
 				3ECC783A2811EDC300E36874 /* ViewModels */,
 				3EF42FC4280F51FE00D5D01F /* Models */,
 				3ED15316280F98360011C8C1 /* Utilities */,
+				3E785D9F28132D460067A86C /* Extensions */,
 				3E608E06280F244A00371D99 /* Assets.xcassets */,
 				3E608E08280F244A00371D99 /* Preview Content */,
 			);
@@ -106,17 +119,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3E785D9F28132D460067A86C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3E785DA028132D5B0067A86C /* Calendar.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3ECC78372811C80F00E36874 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3E608E13280F252E00371D99 /* SemesterEditorView.swift */,
-				3E608E18280F2FFC00371D99 /* SemesterCellView.swift */,
-				3E608E16280F2DA200371D99 /* SemesterListView.swift */,
-				3EF42FC5280F521700D5D01F /* SemesterDetailsView.swift */,
-				3ECC78382811D41800E36874 /* CourseDetailView.swift */,
-				3ED15313280F8EAF0011C8C1 /* CourseEditorView.swift */,
-				3E608E04280F244800371D99 /* CourseThemeView.swift */,
-				3ECC784728121A6600E36874 /* Instructor */,
+				3E12ACCC28130EE800F8E684 /* MainView.swift */,
+				3ECC785028124F9A00E36874 /* SemesterViews */,
+				3ECC785128124FAD00E36874 /* CourseViews */,
+				3ECC784728121A6600E36874 /* InstructorViews */,
 				3E62749A280F6B030049D796 /* ViewDefaults.swift */,
 			);
 			path = Views;
@@ -130,12 +147,37 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		3ECC784728121A6600E36874 /* Instructor */ = {
+		3ECC784728121A6600E36874 /* InstructorViews */ = {
 			isa = PBXGroup;
 			children = (
+				3ECC784A28121CE300E36874 /* InstructorListView.swift */,
+				3ECC784C281224EA00E36874 /* InstructorListCell.swift */,
+				3ECC784E28122B5200E36874 /* InstructorDetailView.swift */,
 				3ECC7845281200DA00E36874 /* InstructorEditorView.swift */,
 			);
-			path = Instructor;
+			path = InstructorViews;
+			sourceTree = "<group>";
+		};
+		3ECC785028124F9A00E36874 /* SemesterViews */ = {
+			isa = PBXGroup;
+			children = (
+				3E608E13280F252E00371D99 /* SemesterEditorView.swift */,
+				3E608E18280F2FFC00371D99 /* SemesterCellView.swift */,
+				3E608E16280F2DA200371D99 /* SemesterListView.swift */,
+				3EF42FC5280F521700D5D01F /* SemesterDetailsView.swift */,
+			);
+			path = SemesterViews;
+			sourceTree = "<group>";
+		};
+		3ECC785128124FAD00E36874 /* CourseViews */ = {
+			isa = PBXGroup;
+			children = (
+				3ECC78382811D41800E36874 /* CourseDetailView.swift */,
+				3E6361452812752C006A0D4E /* CourseListView.swift */,
+				3ED15313280F8EAF0011C8C1 /* CourseEditorView.swift */,
+				3E608E04280F244800371D99 /* CourseThemeView.swift */,
+			);
+			path = CourseViews;
 			sourceTree = "<group>";
 		};
 		3ED15316280F98360011C8C1 /* Utilities */ = {
@@ -239,10 +281,16 @@
 				3ECC78392811D41800E36874 /* CourseDetailView.swift in Sources */,
 				3E608E1B280F39A300371D99 /* Semester.swift in Sources */,
 				3ED1531A280F9D080011C8C1 /* CourseTheme.swift in Sources */,
+				3ECC784F28122B5200E36874 /* InstructorDetailView.swift in Sources */,
+				3E785DA128132D5B0067A86C /* Calendar.swift in Sources */,
+				3ECC784D281224EA00E36874 /* InstructorListCell.swift in Sources */,
+				3ECC784B28121CE300E36874 /* InstructorListView.swift in Sources */,
 				3ED15318280F985A0011C8C1 /* Color.swift in Sources */,
 				3E608E17280F2DA200371D99 /* SemesterListView.swift in Sources */,
+				3E12ACCD28130EE800F8E684 /* MainView.swift in Sources */,
 				3E608E05280F244800371D99 /* CourseThemeView.swift in Sources */,
 				3ECC78442811F69C00E36874 /* SampleData.swift in Sources */,
+				3E6361462812752C006A0D4E /* CourseListView.swift in Sources */,
 				3ECC7846281200DA00E36874 /* InstructorEditorView.swift in Sources */,
 				3E608E03280F244800371D99 /* StudentPlannerApp.swift in Sources */,
 				3E6C30A6280F7A7D000774FF /* DaysOfWeek.swift in Sources */,

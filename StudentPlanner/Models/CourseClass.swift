@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct CourseClass {
+struct CourseClass: Identifiable {
+    let id: UUID
     var courseType: String
     var location: Location
     var instrutor: Instructor

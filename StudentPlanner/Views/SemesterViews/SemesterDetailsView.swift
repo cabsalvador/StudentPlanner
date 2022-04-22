@@ -10,13 +10,14 @@ import SwiftUI
 struct SemesterDetailsView: View {
     @State var semester: Semester
     @State private var isEditing = false
+    @State private var isPresentingCourseEditor = false
     @State private var data = Semester.Data()
+    @State private var courseData = Course.Data()
     var body: some View {
         List {
-            ForEach(semester.courses, id: \.self) { course in
-                HStack {
-                    Image(systemName: "facemask.fill")
-                    Text(course)
+            ForEach($semester.courses, id: \.self) { $course in
+                NavigationLink(destination: CourseDetailView(course: $course)) {
+                    CourseCellView(course: course)
                 }
             }
             .padding(ViewDefaults.listCellPadding)
@@ -25,9 +26,10 @@ struct SemesterDetailsView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Menu {
-                    Button(action: { isEditing = true }) {
+                    Button(action: {}) {
                         Label("New course", systemImage: "doc")
                     }
+                    
                     Button {
                         data = semester.data
                         isEditing = true
@@ -58,6 +60,37 @@ struct SemesterDetailsView: View {
                     }
             }
         }
+        .sheet(isPresented: $isPresentingCourseEditor) {
+            NavigationView {
+                CourseEditorView(data: $courseData)
+                    .toolbar {
+                        ToolbarItem(placement: .confirmationAction) {
+                            Button(action: saveCourse) {
+                                Text("Save")
+                            }
+                        }
+                        
+                        ToolbarItem(placement: .cancellationAction) {
+                            Button(action: dismissCourseEditor) {
+                                Text("Dismiss")
+                            }
+                        }
+                    }
+            }
+        }
+    }
+    
+    private func createCourse() {
+        isPresentingCourseEditor = true
+//        semester.courses.append(<#T##newElement: String##String#>)
+    }
+    
+    private func dismissCourseEditor() {
+        isPresentingCourseEditor = false
+    }
+    
+    private func saveCourse() {
+        isPresentingCourseEditor = false
     }
 }
 
@@ -66,5 +99,18 @@ struct SemesterDetailsView_Previews: PreviewProvider {
         NavigationView {
             SemesterDetailsView(semester: Semester.sampleData[0])
         }
+    }
+}
+
+struct CourseCellView: View {
+    let course: Course
+    var body: some View {
+        HStack(spacing: 15) {
+            Image(systemName: course.sfSymbol)
+                .foregroundColor(Color(course.color))
+            Text(course.title)
+        }
+        .font(.title3)
+        .badge(course.assignments.count)
     }
 }

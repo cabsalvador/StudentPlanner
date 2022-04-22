@@ -27,7 +27,6 @@ struct CourseDetailView: View {
             }
             
             assigmentList
-                .listStyle(.grouped)
 
         }
         .navigationBarTitleDisplayMode(.inline)
@@ -75,7 +74,6 @@ struct CourseDetailView: View {
                         .padding(.vertical, 5)
                 }
             }
-            
         }
     }
     

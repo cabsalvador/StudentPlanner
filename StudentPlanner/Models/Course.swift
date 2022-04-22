@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Course {
+struct Course: Identifiable, Hashable {
     let id: UUID
     var title: String
     var sfSymbol: String
@@ -27,6 +27,14 @@ extension Course {
     
     var data: Data {
         Data(title: title, sfSymbol: sfSymbol, color: color, assignments: assignments)
+    }
+    
+    init(using data: Data, id: UUID = UUID()) {
+        self.id = id
+        self.title = data.title
+        self.sfSymbol = data.sfSymbol
+        self.color = data.color
+        self.assignments = data.assignments
     }
     
     struct Data {

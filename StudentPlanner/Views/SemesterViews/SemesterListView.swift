@@ -10,51 +10,57 @@ import SwiftUI
 struct SemesterListView: View {
     @State var semesters: [Semester]
     @State var data = Semester.Data()
-    @State private var count: Int = 2
-    @State private var isCreating: Bool = false
+    @State private var isEditorPresented: Bool = false
     var body: some View {
         VStack {
             List {
                 ForEach(semesters) { semester in
-                    // TODO: Fill in the destination to each Cell
                     NavigationLink(destination: SemesterDetailsView(semester: semester)) {
                         SemesterCellView(semester: semester)
                     }
-                    .padding(ViewDefaults.listCellPadding)
                 }
                 .onDelete(perform: delete)
                 
                 ForEach(semesters) { semester in
                     Section("\(semester.title)") {
                         ForEach(semester.courses, id: \.self) { course in
-                            Text(course)
+                            HStack {
+                                Image(systemName: course.sfSymbol)
+                                    .foregroundColor(Color(course.color))
+                                Text(course.title)
+                            }
                         }
                         .padding(.horizontal, ViewDefaults.listCellPadding)
                     }
                 }
 
             }
-            addButton
         }
         .navigationTitle("Semesters")
         .toolbar {
-            ToolbarItem(placement: .primaryAction) {
+            ToolbarItem(placement: .navigationBarLeading) {
                 EditButton()
             }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: showSemesterEditor) {
+                    Image(systemName: "plus")
+                }
+                
+            }
         }
-        .sheet(isPresented: $isCreating) {
+        .sheet(isPresented: $isEditorPresented) {
             NavigationView {
                 SemesterEditorView(data: $data)
                     .toolbar {
                         ToolbarItem(placement: .confirmationAction) {
-                            Button("Save") {
-                                
+                            Button(action: save) {
+                                Text("Save")
                             }
                         }
                         
                         ToolbarItem(placement: .cancellationAction) {
-                            Button("Dismiss") {
-                                isCreating = false
+                            Button(action: dismiss) {
+                                Text("Dismiss")
                             }
                         }
                     }
@@ -62,14 +68,21 @@ struct SemesterListView: View {
         }
     }
     
-    private var addButton: some View {
-        Button {
-            withAnimation {
-                isCreating = true
+    private func showSemesterEditor() {
+        isEditorPresented = true
+    }
+    
+    private func dismiss() {
+        isEditorPresented = false
+    }
+    
+    private func save() {
+        withAnimation {
+            isEditorPresented = false
+            semesters.append(Semester(using: data))
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
+                data = Semester.Data()
             }
-        } label: {
-            Label("Create semester", systemImage: "plus.circle")
-                .font(.title3)
         }
     }
     

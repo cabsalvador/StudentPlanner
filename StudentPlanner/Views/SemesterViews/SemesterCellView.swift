@@ -12,8 +12,9 @@ struct SemesterCellView: View {
     var body: some View {
         HStack {
             Image(systemName: "graduationcap")
+                .font(.title2)
             
-            VStack(alignment: .leading, spacing: 3) {
+            VStack(alignment: .leading, spacing: 0) {
                 Text(semester.title)
                     .font(.body)
                 Text("\(semester.start.formatted(date: .long, time: .omitted))")

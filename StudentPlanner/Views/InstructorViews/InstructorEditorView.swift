@@ -11,6 +11,9 @@ struct InstructorEditorView: View {
     @Binding var data: Instructor.Data
     @State private var newEmail = ""
     @State private var newPhone = ""
+    @FocusState private var fieldInFocus: InstructorField?
+    @FocusState private var nextEmail: Bool
+    
     let isEditing: Bool
     var body: some View {
         VStack {
@@ -19,25 +22,38 @@ struct InstructorEditorView: View {
                 Section("Info") {
                     TextField("First Name", text: $data.firstName)
                         .autocapitalization(.words)
+                        .disableAutocorrection(true)
+                        .focused($fieldInFocus, equals: .firstname)
                     TextField("Last Name", text: $data.lastName)
                         .autocapitalization(.words)
+                        .disableAutocorrection(true)
+                        .focused($fieldInFocus, equals: .lastname)
                     TextField("Title", text: $data.title)
+                        .focused($fieldInFocus, equals: .title)
                     TextField("Office Hours", text: $data.officeHours)
+                        .focused($fieldInFocus, equals: .officeHours)
                     TextField("Webpage URL", text: $data.webpageURL)
+                        .focused($fieldInFocus, equals: .webpageURL)
                         .keyboardType(.webSearch)
                         .disableAutocorrection(false)
                         .autocapitalization(.none)
                 }
                 
                 Section("Office") {
-                    TextField("Building", text: $data.department)
+                    TextField("Department", text: $data.department)
+                        .focused($fieldInFocus, equals: .officeBuilding)
                     TextField("Room", text: $data.officeRoom)
+                        .focused($fieldInFocus, equals: .officeRoom)
                 }
                 
                 Section("Emails") {
                     if(!data.emails.isEmpty) {
                         ForEach(0..<data.emails.count, id: \.self) { index in
                             TextField("\(data.emails[index])", text: $data.emails[index])
+                                .keyboardType(.emailAddress)
+                                .autocapitalization(.none)
+                                .disableAutocorrection(true)
+                            
                         }
                     }
                     
@@ -46,7 +62,6 @@ struct InstructorEditorView: View {
                             Image(systemName: "plus.circle.fill")
                                 .foregroundColor(.green)
                         }
-
                         Text("Add Email")
                     }
                 }
@@ -54,8 +69,9 @@ struct InstructorEditorView: View {
                 Section("Phone Numbers") {
                     if(!data.phoneNumbers.isEmpty) {
                         ForEach(0..<data.phoneNumbers.count, id: \.self) { index in
-                            
                             TextField("\(data.phoneNumbers[index])", text: $data.phoneNumbers[index])
+                                .keyboardType(.namePhonePad)
+                                
                         }
                     }
                     
@@ -64,7 +80,6 @@ struct InstructorEditorView: View {
                             Image(systemName: "plus.circle.fill")
                                 .foregroundColor(.green)
                         }
-
                         Text("Add Phone")
                     }
                 }
@@ -76,17 +91,35 @@ struct InstructorEditorView: View {
     }
     
     private func addNewEmail() {
-        data.emails.append("")
-        newEmail = ""
+        nextEmail.toggle()
+        print(data.emails.count)
+        withAnimation {
+            data.emails.append("")
+            newEmail = ""
+        }
     }
     
     private func addNewPhone() {
-        data.phoneNumbers.append("")
-        newPhone = ""
+        withAnimation {
+            data.phoneNumbers.append("")
+            newPhone = ""
+        }
     }
     
     private struct Defaults {
         static let buttonSpacing: CGFloat = 15
+    }
+    
+    private enum InstructorField {
+        case firstname
+        case lastname
+        case title
+        case officeHours
+        case webpageURL
+        case officeBuilding
+        case officeRoom
+        case email
+        case phone
     }
 }
 
