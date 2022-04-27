@@ -17,6 +17,7 @@ struct SemesterEditorView: View {
         Form {
             Section("Details") {
                 TextField("Title", text: $data.title)
+                    .autocapitalization(.words)
                 DatePicker("Start", selection: $data.start, displayedComponents: [.date])
                 DatePicker("End", selection: $data.end, in: data.start..., displayedComponents: [.date])
             }
@@ -27,8 +28,10 @@ struct SemesterEditorView: View {
                         if index == data.courses.count-1 {
                             TextField("\(data.courses[index].title)", text: $data.courses[index].title)
                                 .focused($focusedCourse)
+                                .autocapitalization(.words)
                         } else {
                             TextField("\(data.courses[index].title)", text: $data.courses[index].title)
+                                .autocapitalization(.words)
                         }
                     }
                 }
@@ -38,9 +41,7 @@ struct SemesterEditorView: View {
                         Image(systemName: "plus.circle.fill")
                             .foregroundColor(.green)
                     }
-                    HStack {
-                        Text("New Course")
-                    }
+                    Text("New Course")           
                 }
             }
         }

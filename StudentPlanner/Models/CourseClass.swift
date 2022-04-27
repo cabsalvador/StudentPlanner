@@ -9,11 +9,19 @@ import Foundation
 
 struct CourseClass: Identifiable {
     let id: UUID
-    var courseType: String
+    var learningStyle: LearningStyle
     var location: Location
     var instrutor: Instructor
     
-    enum CourseType{
+    enum LearningStyle {
         case inPerson, online
+    }
+    
+    enum ClassType: String {
+        case `class`
+        case lab
+        case lecture
+        case seminar
+        case studyGroup = "Study Group"
     }
 }

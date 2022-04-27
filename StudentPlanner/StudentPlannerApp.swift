@@ -12,7 +12,7 @@ struct StudentPlannerApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                SemesterListView(semesters: Semester.sampleData)
+                SemesterListView()
             }
         }
     }

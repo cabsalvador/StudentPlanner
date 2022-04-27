@@ -14,7 +14,7 @@ struct MainView: View {
         NavigationView {
         TabView {
 
-                SemesterListView(semesters: semesters)
+                SemesterListView()
                     .tabItem {
                         Label("Semesters", systemImage: "graduationcap.fill")
                     }

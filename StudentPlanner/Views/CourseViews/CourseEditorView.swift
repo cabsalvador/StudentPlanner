@@ -39,13 +39,13 @@ struct CourseEditorView: View {
                 ForEach(data.assignments, id: \.self) { `assignment` in
                     Text(`assignment`)
                 }
-                HStack {
-                    TextField("New Assignment", text: $assignmentTitle)
+                
+                HStack(spacing: 15) {
                     Button(action: createNewAssignment) {
-                        Image(systemName: "plus")
+                        Image(systemName: "plus.circle.fill")
+                            .foregroundColor(.green)
                     }
-                    .buttonStyle(.bordered)
-                    .disabled(assignmentTitle.isEmpty)
+                    Text("New Assignment")
                 }
             }
         }
@@ -56,12 +56,12 @@ struct CourseEditorView: View {
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
                             Button("Dismiss") {
-
+                                
                             }
                         }
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Done") {
-
+                                
                             }
                         }
                     }
@@ -87,7 +87,7 @@ struct CourseEditorView_Previews: PreviewProvider {
                     ToolbarItem(placement: .confirmationAction) {
                         Button(action: {}, label: { Text("Save") })
                     }
-            }
+                }
         }
     }
 }
