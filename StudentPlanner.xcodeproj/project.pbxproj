@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E12ACCD28130EE800F8E684 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E12ACCC28130EE800F8E684 /* MainView.swift */; };
 		3E3077222818CFB100B71676 /* SemesterListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3077212818CFB100B71676 /* SemesterListVM.swift */; };
 		3E608E03280F244800371D99 /* StudentPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E608E02280F244800371D99 /* StudentPlannerApp.swift */; };
 		3E608E05280F244800371D99 /* CourseThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E608E04280F244800371D99 /* CourseThemeView.swift */; };
@@ -21,6 +20,8 @@
 		3E6361462812752C006A0D4E /* CourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6361452812752C006A0D4E /* CourseListView.swift */; };
 		3E6C30A3280F7890000774FF /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C30A2280F7890000774FF /* Course.swift */; };
 		3E6C30A6280F7A7D000774FF /* DaysOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C30A5280F7A7D000774FF /* DaysOfWeek.swift */; };
+		3E76B9BD2818F6BD006E6EF7 /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B9BC2818F6BD006E6EF7 /* DataServiceProtocol.swift */; };
+		3E76B9C02818F6F1006E6EF7 /* TestDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B9BF2818F6F1006E6EF7 /* TestDataService.swift */; };
 		3E785DA128132D5B0067A86C /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E785DA028132D5B0067A86C /* Calendar.swift */; };
 		3E785DA42813362E0067A86C /* CourseClassEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E785DA32813362E0067A86C /* CourseClassEditorView.swift */; };
 		3ECC78392811D41800E36874 /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC78382811D41800E36874 /* CourseDetailView.swift */; };
@@ -40,7 +41,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3E12ACCC28130EE800F8E684 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3E3077212818CFB100B71676 /* SemesterListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterListVM.swift; sourceTree = "<group>"; };
 		3E608DFF280F244800371D99 /* StudentPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E608E02280F244800371D99 /* StudentPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentPlannerApp.swift; sourceTree = "<group>"; };
@@ -55,6 +55,8 @@
 		3E6361452812752C006A0D4E /* CourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListView.swift; sourceTree = "<group>"; };
 		3E6C30A2280F7890000774FF /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		3E6C30A5280F7A7D000774FF /* DaysOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfWeek.swift; sourceTree = "<group>"; };
+		3E76B9BC2818F6BD006E6EF7 /* DataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProtocol.swift; sourceTree = "<group>"; };
+		3E76B9BF2818F6F1006E6EF7 /* TestDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataService.swift; sourceTree = "<group>"; };
 		3E785DA028132D5B0067A86C /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		3E785DA32813362E0067A86C /* CourseClassEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseClassEditorView.swift; sourceTree = "<group>"; };
 		3ECC78382811D41800E36874 /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
@@ -108,7 +110,9 @@
 				3ECC783A2811EDC300E36874 /* ViewModels */,
 				3EF42FC4280F51FE00D5D01F /* Models */,
 				3ED15316280F98360011C8C1 /* Utilities */,
+				3E76B9BB2818F6A5006E6EF7 /* Protocols */,
 				3E785D9F28132D460067A86C /* Extensions */,
+				3E76B9BE2818F6D8006E6EF7 /* DataServices */,
 				3E608E06280F244A00371D99 /* Assets.xcassets */,
 				3E608E08280F244A00371D99 /* Preview Content */,
 			);
@@ -121,6 +125,22 @@
 				3E608E09280F244A00371D99 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3E76B9BB2818F6A5006E6EF7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3E76B9BC2818F6BD006E6EF7 /* DataServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3E76B9BE2818F6D8006E6EF7 /* DataServices */ = {
+			isa = PBXGroup;
+			children = (
+				3E76B9BF2818F6F1006E6EF7 /* TestDataService.swift */,
+			);
+			path = DataServices;
 			sourceTree = "<group>";
 		};
 		3E785D9F28132D460067A86C /* Extensions */ = {
@@ -142,7 +162,6 @@
 		3ECC78372811C80F00E36874 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3E12ACCC28130EE800F8E684 /* MainView.swift */,
 				3ECC785028124F9A00E36874 /* SemesterViews */,
 				3ECC785128124FAD00E36874 /* CourseViews */,
 				3E785DA2281336080067A86C /* CourseClassViews */,
@@ -302,7 +321,7 @@
 				3ECC784B28121CE300E36874 /* InstructorListView.swift in Sources */,
 				3ED15318280F985A0011C8C1 /* Color.swift in Sources */,
 				3E608E17280F2DA200371D99 /* SemesterListView.swift in Sources */,
-				3E12ACCD28130EE800F8E684 /* MainView.swift in Sources */,
+				3E76B9C02818F6F1006E6EF7 /* TestDataService.swift in Sources */,
 				3E608E05280F244800371D99 /* CourseThemeView.swift in Sources */,
 				3ECC78442811F69C00E36874 /* SampleData.swift in Sources */,
 				3E6361462812752C006A0D4E /* CourseListView.swift in Sources */,
@@ -313,6 +332,7 @@
 				3E608E14280F252E00371D99 /* SemesterEditorView.swift in Sources */,
 				3ECC783C2811EDEB00E36874 /* SemesterDetailsVM.swift in Sources */,
 				3ECC78422811F04E00E36874 /* CourseClass.swift in Sources */,
+				3E76B9BD2818F6BD006E6EF7 /* DataServiceProtocol.swift in Sources */,
 				3ECC78402811EF2A00E36874 /* Instructor.swift in Sources */,
 				3EF42FC6280F521700D5D01F /* SemesterDetailsView.swift in Sources */,
 			);

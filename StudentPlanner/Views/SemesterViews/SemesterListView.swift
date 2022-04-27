@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct SemesterListView: View {
-    @StateObject private var semestersVM = SemesterListVM()
+    @StateObject var semestersVM: SemesterListVM
+    
+    init(dataService: DataServiceProtocol) {
+        _semestersVM = StateObject(wrappedValue: SemesterListVM(dataService: dataService))
+    }
     
     var body: some View {
         List {
@@ -75,9 +79,10 @@ struct SemesterListView: View {
 }
 
 struct SemesterListView_Previews: PreviewProvider {
+    static let dataService = TestDataService(data: Semester.sampleData)
     static var previews: some View {
         NavigationView {
-            SemesterListView()
+            SemesterListView(dataService: dataService)
         }
     }
 }

@@ -11,16 +11,18 @@ class SemesterListVM: ObservableObject {
     @Published var semesters: [Semester]
     @Published var data: Semester.Data
     @Published var isEditorPresented: Bool
+    let dataService: DataServiceProtocol
     
-    init() {
-        self.semesters = SemesterListVM.createSemesters()
+    init(dataService: DataServiceProtocol) {
+        self.dataService = dataService
         self.data = Semester.Data()
         self.isEditorPresented = false
+        semesters = []
+        loadSemesters()
     }
     
-    private static func createSemesters() -> [Semester] {
-        let semesters = Semester.sampleData
-        return semesters
+    private func loadSemesters() {
+        semesters = dataService.getSemestersArray()
     }
     
     func showSemesterEditor() {
