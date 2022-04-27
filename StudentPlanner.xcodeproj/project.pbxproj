@@ -22,6 +22,7 @@
 		3E6C30A6280F7A7D000774FF /* DaysOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C30A5280F7A7D000774FF /* DaysOfWeek.swift */; };
 		3E76B9BD2818F6BD006E6EF7 /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B9BC2818F6BD006E6EF7 /* DataServiceProtocol.swift */; };
 		3E76B9C02818F6F1006E6EF7 /* TestDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B9BF2818F6F1006E6EF7 /* TestDataService.swift */; };
+		3E76B9D12818FCF0006E6EF7 /* SemesterListVM_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76B9D02818FCF0006E6EF7 /* SemesterListVM_Test.swift */; };
 		3E785DA128132D5B0067A86C /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E785DA028132D5B0067A86C /* Calendar.swift */; };
 		3E785DA42813362E0067A86C /* CourseClassEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E785DA32813362E0067A86C /* CourseClassEditorView.swift */; };
 		3ECC78392811D41800E36874 /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC78382811D41800E36874 /* CourseDetailView.swift */; };
@@ -40,6 +41,16 @@
 		3EF42FC6280F521700D5D01F /* SemesterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF42FC5280F521700D5D01F /* SemesterDetailsView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3E76B9CB2818FC10006E6EF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E608DF7280F244800371D99 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E608DFE280F244800371D99;
+			remoteInfo = StudentPlanner;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3E3077212818CFB100B71676 /* SemesterListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterListVM.swift; sourceTree = "<group>"; };
 		3E608DFF280F244800371D99 /* StudentPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +68,8 @@
 		3E6C30A5280F7A7D000774FF /* DaysOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfWeek.swift; sourceTree = "<group>"; };
 		3E76B9BC2818F6BD006E6EF7 /* DataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProtocol.swift; sourceTree = "<group>"; };
 		3E76B9BF2818F6F1006E6EF7 /* TestDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataService.swift; sourceTree = "<group>"; };
+		3E76B9C72818FC10006E6EF7 /* StudentPlanner_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudentPlanner_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E76B9D02818FCF0006E6EF7 /* SemesterListVM_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterListVM_Test.swift; sourceTree = "<group>"; };
 		3E785DA028132D5B0067A86C /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		3E785DA32813362E0067A86C /* CourseClassEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseClassEditorView.swift; sourceTree = "<group>"; };
 		3ECC78382811D41800E36874 /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
@@ -83,6 +96,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3E76B9C42818FC10006E6EF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -90,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				3E608E01280F244800371D99 /* StudentPlanner */,
+				3E76B9C82818FC10006E6EF7 /* StudentPlanner_Tests */,
 				3E608E00280F244800371D99 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				3E608DFF280F244800371D99 /* StudentPlanner.app */,
+				3E76B9C72818FC10006E6EF7 /* StudentPlanner_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,6 +163,14 @@
 				3E76B9BF2818F6F1006E6EF7 /* TestDataService.swift */,
 			);
 			path = DataServices;
+			sourceTree = "<group>";
+		};
+		3E76B9C82818FC10006E6EF7 /* StudentPlanner_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3E76B9D02818FCF0006E6EF7 /* SemesterListVM_Test.swift */,
+			);
+			path = StudentPlanner_Tests;
 			sourceTree = "<group>";
 		};
 		3E785D9F28132D460067A86C /* Extensions */ = {
@@ -256,6 +286,24 @@
 			productReference = 3E608DFF280F244800371D99 /* StudentPlanner.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3E76B9C62818FC10006E6EF7 /* StudentPlanner_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E76B9CD2818FC10006E6EF7 /* Build configuration list for PBXNativeTarget "StudentPlanner_Tests" */;
+			buildPhases = (
+				3E76B9C32818FC10006E6EF7 /* Sources */,
+				3E76B9C42818FC10006E6EF7 /* Frameworks */,
+				3E76B9C52818FC10006E6EF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E76B9CC2818FC10006E6EF7 /* PBXTargetDependency */,
+			);
+			name = StudentPlanner_Tests;
+			productName = StudentPlanner_Tests;
+			productReference = 3E76B9C72818FC10006E6EF7 /* StudentPlanner_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -268,6 +316,10 @@
 				TargetAttributes = {
 					3E608DFE280F244800371D99 = {
 						CreatedOnToolsVersion = 13.3.1;
+					};
+					3E76B9C62818FC10006E6EF7 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 3E608DFE280F244800371D99;
 					};
 				};
 			};
@@ -285,6 +337,7 @@
 			projectRoot = "";
 			targets = (
 				3E608DFE280F244800371D99 /* StudentPlanner */,
+				3E76B9C62818FC10006E6EF7 /* StudentPlanner_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,6 +349,13 @@
 			files = (
 				3E608E0A280F244A00371D99 /* Preview Assets.xcassets in Resources */,
 				3E608E07280F244A00371D99 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E76B9C52818FC10006E6EF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +398,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3E76B9C32818FC10006E6EF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E76B9D12818FCF0006E6EF7 /* SemesterListVM_Test.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E76B9CC2818FC10006E6EF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E608DFE280F244800371D99 /* StudentPlanner */;
+			targetProxy = 3E76B9CB2818FC10006E6EF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3E608E0B280F244A00371D99 /* Debug */ = {
@@ -469,6 +545,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -498,6 +575,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -510,6 +588,42 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3E76B9CE2818FC10006E6EF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7RAJ53CC6B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salcabrera.StudentPlanner-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudentPlanner.app/StudentPlanner";
+			};
+			name = Debug;
+		};
+		3E76B9CF2818FC10006E6EF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7RAJ53CC6B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.salcabrera.StudentPlanner-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudentPlanner.app/StudentPlanner";
 			};
 			name = Release;
 		};
@@ -530,6 +644,15 @@
 			buildConfigurations = (
 				3E608E0E280F244A00371D99 /* Debug */,
 				3E608E0F280F244A00371D99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E76B9CD2818FC10006E6EF7 /* Build configuration list for PBXNativeTarget "StudentPlanner_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E76B9CE2818FC10006E6EF7 /* Debug */,
+				3E76B9CF2818FC10006E6EF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
